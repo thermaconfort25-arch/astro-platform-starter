@@ -2,18 +2,71 @@
 import Layout from '../layouts/Layout.astro';
 import Markdown from '../components/Markdown.astro';
 
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
----
-
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
+<Layout title="Thermaconfort – Chauffage, plomberie et climatisation">
+  <section>
+    <h1>Thermaconfort</h1>
     <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
+      Thermaconfort est une entreprise spécialisée dans le chauffage, la plomberie
+      et la climatisation. Nous accompagnons les particuliers et les professionnels
+      pour l’installation, l’entretien et le dépannage de leurs équipements.
     </p>
+  </section>
+
+  <section>
+    <h2>Nos services</h2>
+    <ul>
+      <li>Installation et entretien de chaudières</li>
+      <li>Dépannage chauffage toutes marques</li>
+      <li>Plomberie générale et sanitaires</li>
+      <li>Climatisation et pompes à chaleur</li>
+      <li>Maintenance et mise en conformité</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Zone d’intervention</h2>
+    <p>Nous intervenons dans toute la Wallonie.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Téléphone :</strong> 0498 62 25 36</p>
+    <p><strong>Email :</strong> therma.confort@hotmail.com</p>
+
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
+
+      <p>
+        <label>
+          Nom<br />
+          <input type="text" name="name" required />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Téléphone<br />
+          <input type="tel" name="phone" />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Email<br />
+          <input type="email" name="email" required />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Message<br />
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+      </p>
+
+      <p>
+        <button type="submit">Envoyer</button>
+      </p>
+    </form>
+  </section>
 </Layout>
