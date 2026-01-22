@@ -1,34 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
+---
 
 <Layout title="Thermaconfort – Chauffage, plomberie et climatisation">
-  <section>
+  <section style="max-width: 900px; margin: auto; padding: 2rem;">
     <h1>Thermaconfort</h1>
+
     <p>
       Thermaconfort est une entreprise spécialisée dans le chauffage, la plomberie
-      et la climatisation. Nous accompagnons les particuliers et les professionnels
-      pour l’installation, l’entretien et le dépannage de leurs équipements.
+      et la climatisation. Nous intervenons pour l’installation, l’entretien et le
+      dépannage de vos équipements avec sérieux et réactivité.
     </p>
-  </section>
 
-  <section>
     <h2>Nos services</h2>
     <ul>
-      <li>Installation et entretien de chaudières</li>
-      <li>Dépannage chauffage toutes marques</li>
+      <li>Chauffage : installation, entretien et dépannage</li>
       <li>Plomberie générale et sanitaires</li>
       <li>Climatisation et pompes à chaleur</li>
       <li>Maintenance et mise en conformité</li>
     </ul>
-  </section>
 
-  <section>
     <h2>Zone d’intervention</h2>
-    <p>Nous intervenons dans toute la Wallonie.</p>
-  </section>
+    <p>Wallonie</p>
 
-  <section id="contact">
     <h2>Contact</h2>
     <p><strong>Téléphone :</strong> 0498 62 25 36</p>
     <p><strong>Email :</strong> therma.confort@hotmail.com</p>
@@ -37,36 +31,30 @@ import Markdown from '../components/Markdown.astro';
       <input type="hidden" name="form-name" value="contact" />
 
       <p>
-        <label>
-          Nom<br />
+        <label>Nom<br />
           <input type="text" name="name" required />
         </label>
       </p>
 
       <p>
-        <label>
-          Téléphone<br />
+        <label>Téléphone<br />
           <input type="tel" name="phone" />
         </label>
       </p>
 
       <p>
-        <label>
-          Email<br />
+        <label>Email<br />
           <input type="email" name="email" required />
         </label>
       </p>
 
       <p>
-        <label>
-          Message<br />
-          <textarea name="message" rows="6" required></textarea>
+        <label>Message<br />
+          <textarea name="message" rows="5" required></textarea>
         </label>
       </p>
 
-      <p>
-        <button type="submit">Envoyer</button>
-      </p>
+      <button type="submit">Envoyer</button>
     </form>
   </section>
 </Layout>
